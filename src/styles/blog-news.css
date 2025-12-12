@@ -1,0 +1,224 @@
+/* Título com barra verde */
+.videos-section {
+    padding: 40px 24px;
+}
+
+
+.videos-title-container {
+    padding: 64px 24px 40px 24px;
+    background: linear-gradient(270deg, #CCC 0%, #FFF 100%);
+}
+
+.videos-title-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+}
+
+.videos-title-content::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background-color: #8cc540;
+}
+
+.videos-title-content h2 {
+    font-family: "Avenir Next Cyr";
+    font-size: 40px;
+    line-height: normal;
+    color: #4d4d4d;
+    margin: -5px;
+    font-weight: 900;
+}
+
+.videos-title-content h3 {
+    font-family: "Avenir Next Cyr";
+    font-size: 24px;
+    line-height: normal;
+    color: #4d4d4d;
+    margin: -5px;
+    font-weight: 700;
+}
+
+.videos-title-content p {
+    font-family: "Avenir Next Cyr";
+    font-size: 16px;
+    color: #4d4d4d;
+    margin: 0;
+}
+
+/* Mobile first - uma coluna */
+.news-card-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 40px 24px;
+    margin: 0;
+}
+
+.news-card {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-image-text {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    color: white;
+    font-family: "Avenir Next Cyr";
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.news-container {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-text {
+    font-family: "Avenir Next Cyr";
+    font-size: 14px;
+    font-weight: 400;
+    color: #4d4d4d;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.btn-leia-mais {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #4d4d4d;
+    font-family: "Avenir Next Cyr";
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+.btn-leia-mais .arrow {
+    font-size: 18px;
+}
+
+.btn-leia-mais:hover {
+    color: #8cc540;
+}
+
+.anterior-proximo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4d4d4d;
+}
+
+.anterior {
+    display: flex;
+}
+
+.proximo {
+    display: flex;
+}
+
+.btn-container-desktop {
+    display: none;
+}
+
+.btn-container-mobile {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Avenir Next Cyr";
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-sequence {
+    border: none;   
+    outline: none;      
+    box-shadow: none;    
+    background: none; 
+    color: #4d4d4d;
+}
+
+/* Desktop - 3 colunas usando Grid */
+@media screen and (min-width: 768px) {
+    .videos-title-container {
+        padding: 100px 120px;
+    }
+
+    .videos-section {
+        padding: 100px 120px;
+    }
+
+    .news-card-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);  /* 3 colunas iguais */
+        gap: 24px;  /* Espaço entre os cards */
+    }
+
+    .news-card {
+        margin-bottom: 0;  /* Remove o margin-bottom no desktop, o gap do Grid já faz o espaçamento */
+    }
+
+    .news-image {
+        height: 250px;
+    }
+
+    .news-image-text {
+        font-size: 20px;
+    }
+
+    .news-text {
+        font-size: 16px;
+    }
+
+    
+    .videos-title-content h3{
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .btn-container-mobile {
+        display: none;
+    }
+
+    .btn-container-desktop {
+        font-size: 14px;
+        font-weight: 500;
+        font-family: "Avenir Next Cyr";
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-sequence {
+        margin-left: 20px;
+    } 
+}
